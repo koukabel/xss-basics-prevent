@@ -41,11 +41,11 @@
 
     <script>
 
-        const input = document.getElementById("token-question");
+           const input = document.getElementById("token-question");
+        const sanitizedInput = input.replace(/<[^>]+>/g, '');
         const log = document.getElementById("token-answer");
 
-        input.addEventListener("input", updateValue);
-
+        input.addEventListener("sanitizedInput", updateValue);
         function updateValue(e) {
             log.innerHTML = e.target.value;
         }
